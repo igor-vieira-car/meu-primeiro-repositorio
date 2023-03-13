@@ -1,0 +1,20 @@
+.interno{
+    color: black;
+    font-family: monospace;
+    font-weight: 500;
+}
+.boanoite{
+    color: darkblue;
+}
+
+.bomdia{
+    color: yellow;
+    font-weight: 500;
+}
+
+.externo {
+    color: brown;
+    font-family: monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
