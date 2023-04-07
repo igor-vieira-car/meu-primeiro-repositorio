@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o CHARjs</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex;">
+    <div>
+        <canvas id="myChart" style="position: relative; height:40vh; width:40vw"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
+    </div>
+    
+</body>
+</html>
+<script>
+    const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ]
+
+    const data = {
+        labels:labels,
+        datasets:[{
+            label: 'Temperatura',
+            backgroundColor: 'RGB(54, 162, 235)',
+            borderColor: 'RGB(54, 162, 235)',
+            data:[30,29,28,25,22,24]
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data:[80,82,80,85,85,83]
+        }
+    ]
+        
+    } 
+    const data2 = {
+        labels:labels,
+        datasets:[{
+            label: 'Temperatura Média',
+            backgroundColor: 'rgb(255, 99, 132)',
+            data:[21,24,27,23,20,19]
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'RGB(54, 162, 235)',
+            data:[90,89,92,87,88,82]
+        }
+    ]
+        
+    } 
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    }
+    const config2 = {
+        type: 'bar',
+        data: data2,
+        options: {}
+    }
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+</script>
+ 
